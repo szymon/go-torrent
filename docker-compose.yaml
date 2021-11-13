@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  go-torrent:
+    hostname: go-torrent
+    container_name: go-torrent
+    build:
+      context: .
+    environment:
+      GET_HOST_FROM: dns
+
+    ports:
+      - '8888:8888'
